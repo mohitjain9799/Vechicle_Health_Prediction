@@ -1,2 +1,2 @@
-flask
-numpy
+Flask == 3.0.1
+NumPy == 2.0.0
