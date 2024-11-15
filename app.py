@@ -27,7 +27,7 @@ def predict():
         # Make prediction
         prediction = model.predict(features)
         confidence = model.predict_proba(features)[:, 1]
-z
+
         return jsonify({
             "prediction": int(prediction[0]),
             "confidence": float(confidence[0])
