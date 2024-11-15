@@ -27,7 +27,7 @@ def predict():
         # Make prediction
         prediction = model.predict(features)
         confidence = model.predict_proba(features)[:, 1]
-
+z
         return jsonify({
             "prediction": int(prediction[0]),
             "confidence": float(confidence[0])
@@ -36,4 +36,4 @@ def predict():
         return jsonify({"error": str(e)})
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))  # Runs on localhost:5000
+    app.run(debug=True)  # Runs on localhost:5000
