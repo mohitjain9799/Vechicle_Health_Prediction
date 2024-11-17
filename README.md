@@ -20,13 +20,12 @@ This project provides a RESTful API for predicting engine health based on variou
 
 Step 1: Clone the Repository
 
-git clone https://github.com/your-username/engine-health-prediction-api.git
-cd engine-health-prediction-api
+`git clone https://github.com/mohitjain9799/Vechicle_Health_Prediction.git`
+`cd Vechicle_Health_Prediction`
 
 Step 2: Install Dependencies
-Install the required libraries:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 Step 3: Add the Model File
 
@@ -36,12 +35,13 @@ Step 4: Run the Application
 
 Start the Flask server:
 
-python app.py
+`python app.py`
+
 The application will run on http://localhost:5000 by default.
 
 API Endpoints
 
-1. Home
+- Home
 
 Endpoint: /
 
@@ -51,13 +51,13 @@ Description: A test endpoint to check if the API is running.
 
 Example Request
 
-curl http://localhost:5000/
+`curl http://localhost:5000/`
 
 Example Response
 
 Flask is working!
 
-2. Prediction
+- Prediction
 
 Endpoint: /predict
 
@@ -84,16 +84,18 @@ temperature_difference: (float) Temperature difference
 Example Request
 
 curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" -d '{
-    "engine_rpm": 3000,
-    "lub_oil_pressure": 50,
-    "fuel_pressure": 75,
-    "coolant_pressure": 60,
-    "lub_oil_temp": 80,
-    "coolant_temp": 90,
-    "temperature_difference": 10
+  "engine_rpm": 3000,
+  "lub_oil_pressure": 50,
+  "fuel_pressure": 75,
+  "coolant_pressure": 60,
+  "lub_oil_temp": 80,
+  "coolant_temp": 90,
+  "temperature_difference": 10
 }'
 
+
 Example Response
+
 {
   "prediction": 1,
   "confidence": 0.85
