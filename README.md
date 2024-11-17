@@ -44,27 +44,45 @@ API Endpoints
 1. Home
 
 Endpoint: /
+
 Method: GET
+
 Description: A test endpoint to check if the API is running.
+
 Example Request
+
 curl http://localhost:5000/
+
 Example Response
+
 Flask is working!
 
 2. Prediction
 
 Endpoint: /predict
+
 Method: POST
+
 Description: Predicts engine health based on input sensor features.
+
 Request Body: JSON format with the following fields:
+
 engine_rpm: (float) Engine RPM
+
 lub_oil_pressure: (float) Lubricant oil pressure
+
 fuel_pressure: (float) Fuel pressure
+
 coolant_pressure: (float) Coolant pressure
+
 lub_oil_temp: (float) Lubricant oil temperature
+
 coolant_temp: (float) Coolant temperature
+
 temperature_difference: (float) Temperature difference
+
 Example Request
+
 curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" -d '{
     "engine_rpm": 3000,
     "lub_oil_pressure": 50,
@@ -74,6 +92,7 @@ curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" -
     "coolant_temp": 90,
     "temperature_difference": 10
 }'
+
 Example Response
 {
   "prediction": 1,
@@ -81,11 +100,15 @@ Example Response
 }
 
 Project Resources
+
 Flask Documentation: https://flask.palletsprojects.com/
+
 NumPy Documentation: https://numpy.org/doc/
 
-Contact
+Contact:
+
 For further questions or issues, please contact the project maintainer:
 
 Name: Mohit Jain
+
 Email: mohitjain9799@gmail.com
