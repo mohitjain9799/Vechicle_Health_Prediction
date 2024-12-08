@@ -10,8 +10,8 @@ This API predicts engine health based on input sensor features using a pre-train
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/your-username/engine-health-prediction-api.git
-cd engine-health-prediction-api
+git clone https://github.com/mohitjain9799/Vechicle_Health_Prediction.git
+cd Vechicle_Health_Prediction
 ```
 
 ### Step 2: Install Dependencies
